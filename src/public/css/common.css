@@ -1,0 +1,44 @@
+.header {
+    background: #000;
+    max-width: 1515px;
+    /* width: 1515px; */
+    padding: 0px 20px;
+}
+
+.header__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__search {
+    width: 500px;
+    color: #000;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__login,
+.header__logout,
+.header__mypage {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.header__listing {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #fff;
+    color: black;
+    border-radius: 5px;
+}

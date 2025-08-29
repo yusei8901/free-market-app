@@ -15,11 +15,3 @@ yarn-error.log
 /.idea
 /.vscode
 
-# Docker 関連
-docker/mysql/data/
-docker/mysql/logs/
-docker/mysql/conf.d/*.cnf
-
-# OS 系
-Thumbs.db
-ehthumbs.db

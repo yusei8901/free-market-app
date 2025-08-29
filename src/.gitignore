@@ -1,3 +1,4 @@
+# Laravel 基本
 /node_modules
 /public/hot
 /public/storage
@@ -14,5 +15,11 @@ yarn-error.log
 /.idea
 /.vscode
 
-# MySQL container data
+# Docker 関連
 docker/mysql/data/
+docker/mysql/logs/
+docker/mysql/conf.d/*.cnf
+
+# OS 系
+Thumbs.db
+ehthumbs.db

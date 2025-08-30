@@ -21,17 +21,18 @@ input:last-of-type {
 }
 
 
-.login__box {
+.register__box {
     width: 680px;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
-.login__form {
+.register__form {
     margin-bottom: 30px;
 }
-.login__title {
+.register__title {
     text-align: center;
 }
-.login__btn {
+.register__btn {
     width: 100%;
     color: #fff;
     background: #f55;
@@ -44,10 +45,10 @@ input:last-of-type {
 }
 
 
-.register__box {
+.login__box {
     text-align: center;
 }
-.register__url {
+.login__url {
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;

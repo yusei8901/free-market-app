@@ -38,11 +38,13 @@ input:last-of-type {
     border: none;
     border-radius: 3px;
     padding: 20px;
-
     font-size: 26px;
     font-weight: bold;
 }
-
+.login__btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
 
 .register__box {
     text-align: center;

@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/sell.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 @endsection
 
 @section('content')
@@ -9,29 +10,31 @@
     <h2 class="profile__title">商品の出品</h2>
     <form class="profile__form" action="" method="post">
         @csrf
-        <label for="img">商品画像</label>
-        <input type="image" name="img">
-        <div><a href="#">画像を選択する</a></div>
+        <!-- 商品画像設定 -->
+        <p>商品画像</p>
+        <div class="image__box">
+            <label class="product-img" for="img">画像を選択する</label>
+            <input type="file" class="hidden" name="img" id="img">
+        </div>
 
         <h3 class="sell__title">商品の詳細</h3>
-        <div>カテゴリー</div>
-        <label class="category-btn">
-            <input class="hidden" type="checkbox" name="name">
-            <span>ファッション</span>
-        </label>
-        <label class="category-btn">
-            <input class="hidden" type="checkbox" name="name">
-            <span>家電</span>
-        </label>
-        <label class="category-btn">
-            <input class="hidden" type="checkbox" name="name">
-            <span>インテリア</span>
-        </label>
-        <label class="category-btn">
-            <input class="hidden" type="checkbox" name="name">
-            <span>レディース</span>
-        </label>
-        <div></div>
+        <!-- カテゴリー設定 -->
+        <p>カテゴリー</p>
+        <div class="category__box">
+            <input type="checkbox" class="checkbox hidden" name="name" id="fashion">
+            <label class="category-btn" for="fashion">ファッション</label>
+
+            <input type="checkbox" class="checkbox hidden" name="name" id="appliance">
+            <label class="category-btn" for="appliance">家電</label>
+
+            <input type="checkbox" class="checkbox hidden" name="name" id="interior">
+            <label class="category-btn" for="interior">インテリア</label>
+
+            <input type="checkbox" class="checkbox hidden" name="name" id="ladies">
+            <label class="category-btn" for="ladies">レディース</label>
+
+        </div>
+
 
 
         <label for="name">商品の状態</label>
@@ -50,8 +53,13 @@
         <input type="number" name="post_code">
         <label for="explanation">商品の説明</label>
         <textarea name="explanation" id="explanation"></textarea>
+
         <label for="building_name">販売価格</label>
-        <input type="text" name="building_name">
+        <div class="price__box">
+            <i class="fa-sharp fa-solid fa-yen-sign price-icon" style="color: #000000;"></i>
+            <input class="input-price" type="text" name="building_name">
+        </div>
+
         <button class="profile__btn" type="submit">出品する</button>
     </form>
 </div>

@@ -7,56 +7,56 @@
 @section('content')
 
 <div class="lists">
-    <a href="#">おすすめ</a>
-    <a href="#">マイリスト</a>
+    <a href="#" class="recommend">おすすめ</a>
+    <a href="#" class="my-list">マイリスト</a>
 </div>
 <div class="product">
     <div class="product__card">
         <div class="product__box">
-            <div class="product__img">
-                <p class="product__img-name">商品画像</p>
-            </div>
-            <p class="product__name">商品名</p>
+            <a href="" class="product__link">
+                <img class="product__img" src="{{ asset('img/Leather+Shoes+Product+Photo.jpg') }}" alt="商品画像">
+                <p class="product__name">商品名</p>
+            </a>
         </div>
     </div>
     <div class="product__card">
         <div class="product__box">
-            <div class="product__img">
-                <p class="product__img-name">商品画像</p>
-            </div>
-            <p class="product__name">商品名</p>
+            <a href="" class="product__link">
+                <img class="product__img" src="{{ asset('img/Living+Room+Laptop.jpg') }}" alt="商品画像">
+                <p class="product__name">商品名</p>
+            </a>
         </div>
     </div>
     <div class="product__card">
         <div class="product__box">
-            <div class="product__img">
-                <p class="product__img-name">商品画像</p>
-            </div>
-            <p class="product__name">商品名</p>
+            <a href="" class="product__link">
+                <img class="product__img" src="{{ asset('img/Living+Room+Laptop.jpg') }}" alt="商品画像">
+                <p class="product__name">商品名</p>
+            </a>
         </div>
     </div>
     <div class="product__card">
         <div class="product__box">
-            <div class="product__img">
-                <p class="product__img-name">商品画像</p>
-            </div>
-            <p class="product__name">商品名</p>
+            <a href="" class="product__link">
+                <img class="product__img" src="{{ asset('img/Living+Room+Laptop.jpg') }}" alt="商品画像">
+                <p class="product__name">商品名</p>
+            </a>
         </div>
     </div>
     <div class="product__card">
         <div class="product__box">
-            <div class="product__img">
-                <p class="product__img-name">商品画像</p>
-            </div>
-            <p class="product__name">商品名</p>
+            <a href="" class="product__link">
+                <img class="product__img" src="{{ asset('img/Living+Room+Laptop.jpg') }}" alt="商品画像">
+                <p class="product__name">商品名</p>
+            </a>
         </div>
     </div>
     <div class="product__card">
         <div class="product__box">
-            <div class="product__img">
-                <p class="product__img-name">商品画像</p>
-            </div>
-            <p class="product__name">商品名</p>
+            <a href="" class="product__link">
+                <img class="product__img" src="{{ asset('img/Living+Room+Laptop.jpg') }}" alt="商品画像">
+                <p class="product__name">商品名</p>
+            </a>
         </div>
     </div>
 </div>

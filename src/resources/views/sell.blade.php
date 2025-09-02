@@ -68,6 +68,11 @@
             <i class="fa-sharp fa-solid fa-yen-sign price-icon" style="color: #000000;"></i>
             <input class="input-price" type="text" name="building_name">
         </div>
+        
+        <div class="price-input">
+            <span class="yen">¥</span>
+            <input type="number" name="price" class="price-field" placeholder="販売価格を入力">
+        </div>
 
         <button class="profile__btn" type="submit">出品する</button>
     </form>

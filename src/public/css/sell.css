@@ -108,6 +108,10 @@ form textarea {
     margin-bottom: 80px;
     border: 1px solid #000;
 }
+.price__box:focus-within {
+    border: 2px solid #000;
+}
+
 .price-icon {
     text-align: center;
     font-size: 32px;
@@ -125,6 +129,45 @@ form textarea {
     outline: none;
     box-sizing: border-box;
     margin-bottom: 0px;
+}
+
+.price__box:focus {
+    border: 2px solid #000;
+    font-weight: bold;
+    outline: none;
+}
+
+/* 親コンテナ */
+.price-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    width: 200px;
+    /* 任意 */
+    transition: border 0.2s ease-in-out;
+}
+
+/* ¥マーク */
+.price-input .yen {
+    margin-right: 8px;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* 入力フィールド */
+.price-input .price-field {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+}
+
+/* フォーカス時に外枠を太く */
+.price-input:focus-within {
+    border: 2px solid #000;
+    /* 太さ・色を調整 */
 }
 
 .profile__btn {

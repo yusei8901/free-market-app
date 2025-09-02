@@ -1,0 +1,162 @@
+.header {
+    margin-bottom: 100px;
+}
+
+.item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1380px;
+}
+
+/* 左のセクション */
+.item-left {
+    width: 50%;
+}
+.item-left__img-box {
+    padding: 100px 50px;
+    width: 100%;
+    text-align: center;
+}
+.item-left__img-box img {
+    width: 600px;
+    height: 600px;
+}
+
+/* 右のセクション */
+.item-right {
+    width: 50%;
+    padding: 50px;
+}
+
+.item-right__product {
+    margin-bottom: 30px;
+}
+.product-title {
+    font-size: 46px;
+    margin: 0px;
+}
+.brand-name {
+    font-size: 20px;
+    margin: 0px;
+}
+.price {
+    font-size: 30px;
+}
+
+/* いいね・コメント部分 */
+.actions {
+    display: flex;
+    padding: 0px 40px;
+    margin-bottom: 20px;
+}
+.favorite {
+    margin-right: 50px;
+}
+.action-number {
+    margin: 0px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* 購入リンク用ボタン */
+.purchase-link {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    background: #ff5555;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+.purchase-link:hover {
+    opacity: 0.8;
+}
+
+/* 商品説明セクション */
+.item-right__explanation {
+    margin-bottom: 50px;
+}
+.section-title {
+    font-size: 36px;
+}
+.no-margin-bottom {
+    margin-bottom: 0px;
+}
+.no-margin-top {
+    margin-top: 0px;
+}
+
+/* 商品情報セクション */
+table {
+    text-align: center;
+}
+th {
+    padding-right: 50px;
+}
+td {
+    padding: 10px;
+}
+.category {
+    display: inline-block;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+
+/* コメントセクション */
+.comment-title {
+    color: #5f5f5f;
+    font-size: 36px;
+}
+.comment-view {
+    margin-bottom: 30px;
+}
+.user {
+    display: flex;
+    align-items: center;
+}
+.icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.user-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+.comment-content {
+    background-color: #e5e5e5;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+label {
+    font-weight: bold;
+    font-size: 28px;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    height: 250px;
+    margin-bottom: 40px;
+}
+.submit-btn {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    background: #ff5555;
+    padding: 7px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+}
+.submit-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

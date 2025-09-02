@@ -54,6 +54,9 @@ form textarea {
 /* カテゴリーセクション */
 .category__box {
     margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .category-btn {
     border: 2px solid #ff5655;
@@ -63,6 +66,7 @@ form textarea {
     font-weight: normal;
     font-size: 16px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 .category-btn:hover {
     cursor: pointer;
@@ -105,9 +109,9 @@ form textarea {
     border: 1px solid #000;
 }
 .price-icon {
-    height: 50px;
-    width: 50px;
-    padding: 10px;
+    text-align: center;
+    font-size: 32px;
+    padding: 0px 10px;
 }
 .price-icon::before {
     display: inline-block;

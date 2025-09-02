@@ -23,15 +23,24 @@
         <div class="category__box">
             <input type="checkbox" class="checkbox hidden" name="name" id="fashion">
             <label class="category-btn" for="fashion">ファッション</label>
-
             <input type="checkbox" class="checkbox hidden" name="name" id="appliance">
             <label class="category-btn" for="appliance">家電</label>
-
             <input type="checkbox" class="checkbox hidden" name="name" id="interior">
             <label class="category-btn" for="interior">インテリア</label>
-
             <input type="checkbox" class="checkbox hidden" name="name" id="ladies">
             <label class="category-btn" for="ladies">レディース</label>
+            <input type="checkbox" class="checkbox hidden" name="name" id="men">
+            <label class="category-btn" for="men">メンズ</label>
+            <input type="checkbox" class="checkbox hidden" name="name" id="cos">
+            <label class="category-btn" for="cos">コスメ</label>
+            <input type="checkbox" class="checkbox hidden" name="name" id="book">
+            <label class="category-btn" for="book">本</label>
+            <input type="checkbox" class="checkbox hidden" name="name" id="game">
+            <label class="category-btn" for="game">ゲーム</label>
+            <input type="checkbox" class="checkbox hidden" name="name" id="sports">
+            <label class="category-btn" for="sports">スポーツ</label>
+            <input type="checkbox" class="checkbox hidden" name="name" id="kitchen">
+            <label class="category-btn" for="kitchen">キッチン</label>
 
         </div>
 

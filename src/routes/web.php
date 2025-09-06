@@ -38,3 +38,9 @@ Route::get('/mypage', function () {
 Route::get('/mypage-edit', function () {
     return view('mypage-edit');
 });
+Route::get('/purchase', function() {
+    return view('purchase');
+});
+Route::get('/purchase-address', function() {
+    return view('purchase-address');
+});

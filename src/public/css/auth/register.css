@@ -1,0 +1,65 @@
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+label {
+    font-size: 24px;
+    font-weight: 700;
+}
+input {
+    width: 100%;
+    display: inline-block;
+    font-size: 24px;
+    padding: 10px;
+}
+.input-box {
+    margin-bottom: 30px;
+}
+.input-box:last-of-type {
+    margin-bottom: 50px;
+}
+.header {
+    margin-bottom: 80px;
+}
+
+
+.register__box {
+    width: 680px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.register__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+.register__form {
+    margin-bottom: 30px;
+}
+.register__title {
+    text-align: center;
+}
+.register__btn {
+    width: 100%;
+    color: #fff;
+    background: #f55;
+    border: none;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.register__btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.login__box {
+    text-align: center;
+}
+.login__url {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #0073CC;
+}

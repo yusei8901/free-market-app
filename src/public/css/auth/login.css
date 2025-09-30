@@ -1,0 +1,66 @@
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+label {
+    font-size: 24px;
+    font-weight: 700;
+}
+input {
+    display: inline-block;
+    width: 100%;
+    font-size: 24px;
+    padding: 10px;
+}
+.header {
+    margin-bottom: 80px;
+}
+
+.login__box {
+    width: 680px;
+    margin: 0 auto;
+}
+
+.login__form {
+    margin-bottom: 30px;
+}
+.login__title {
+    text-align: center;
+}
+
+.input-box {
+    margin-bottom: 30px;
+}
+.input-box:last-of-type {
+    margin-bottom: 50px;
+}
+.login__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.login__btn {
+    width: 100%;
+    color: #fff;
+    background: #f55;
+    border: none;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.login__btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.register__box {
+    text-align: center;
+}
+.register__url {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #0073CC;
+}

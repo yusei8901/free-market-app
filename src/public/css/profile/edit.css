@@ -1,0 +1,92 @@
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+label {
+    font-size: 24px;
+    font-weight: 700;
+}
+form input {
+    width: 100%;
+    display: inline-block;
+    font-size: 24px;
+    padding: 10px;
+}
+.message-box {
+    margin-bottom: 50px;
+    height: 20px;
+}
+.message-box:last-of-type {
+    margin-bottom: 80px;
+}
+.message-error {
+    color: #ff0000;
+    text-align: left;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.profile__box {
+    width: 680px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.profile__form {
+    margin-bottom: 30px;
+}
+.profile__title {
+    text-align: center;
+}
+
+
+.image-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0px;
+}
+.select-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #f55;
+    border: 1.5px solid #f55;
+}
+.select-btn:hover {
+    cursor: pointer;
+    background-color: #f55;
+    color: #fff;
+}
+.hidden {
+    display: none;
+}
+#previewContainer {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 80px;
+    background-color: #d9d9d9;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+.submit-btn {
+    width: 100%;
+    color: #fff;
+    background: #f55;
+    border: none;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    opacity: 0.8;
+}

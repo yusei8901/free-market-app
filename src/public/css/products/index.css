@@ -1,0 +1,111 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+/* タブメニュー */
+.tab {
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+.tab-inner {
+    padding: 5px;
+    max-width: 1540px;
+    min-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 100px;
+    list-style: none;
+    display: flex;
+}
+.tab-inner li {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 40px;
+}
+.tab-inner li.selected {
+    color: #ff0000;
+}
+/* 選択されていないタブは、カーソルをポインター表示にする。*/
+.tab-inner li:not(.selected) {
+    cursor: pointer;
+}
+/* 選択されていないタブは、ホバー時に半透明にする。*/
+.tab-inner li:not(.selected):hover {
+    opacity: 0.6;
+}
+
+
+/* コンテンツ */
+.product {
+    display: none;
+}
+/* selectedクラスが付いたコンテンツのみ表示。 */
+.product.selected {
+    max-width: 1540px;
+    min-width: 1400px;
+    margin: 0 auto;
+    padding: 70px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product__card {
+    width: 25%;
+    margin-bottom: 50px;
+}
+.product__link:hover {
+    opacity: 0.7;
+}
+.product__box {
+    width: 90%;
+    margin: 0 auto;
+}
+.product__img {
+    /* background-color: #d9d9d9; */
+    width: 290px;
+    height: 290px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.product__img-name {
+    font-size: 40px;
+}
+.product__name {
+    font-size: 24px;
+    margin: 0px;
+}
+
+
+.guest-box {
+    margin: 0 auto;
+}
+
+.login__box {
+    text-align: center;
+    margin: 40px 0px;
+}
+.login__url {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #0073CC;
+}
+
+.register__box {
+    text-align: center;
+}
+.register__url {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #0073CC;
+}
+
+.login__url:hover,
+.register__url:hover {
+    opacity: 0.8;
+}

@@ -7,6 +7,18 @@ a {
     position: relative;
     z-index: 10;
 }
+.sold-out {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 10px 30px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .success-alert {
     width: 100%;
     padding: 10px 15px;
@@ -30,69 +42,13 @@ a {
         opacity: 0;
     }
 }
-.sold-out {
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    padding: 10px 30px;
-    background-color: rgb(255, 0, 0);
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-/* ユーザー名セクション */
-.mypage-user {
-    max-width: 1015px;
-    margin: 100px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.mypage-user__box {
-    width: 70%;
-    display: flex;
-    align-items: center;
-}
-.mypage-user__profile {
-    background-color: #d9d9d9;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 80px;
-}
-.mypage-user__profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-.mypage-user__profile-name {
-    font-size: 36px;
-    font-weight: bold;
-}
-.mypage-user__edit-link {
-    display: inline-block;
-    color: #ff5555;
-    border: 1.5px solid #ff5555;
-    border-radius: 5px;
-    padding: 10px 30px;
-    font-weight: bold;
-    font-size: 24px;
-}
-.mypage-user__edit-link:hover {
-    color: #fff;
-    background: #ff5555;
-}
 
 /* タブメニュー */
-.mypage-tab__box {
+.index__tab {
     width: 100%;
     border-bottom: 2px solid #000;
 }
-.mypage-tab__box-inner {
+.index__tab-inner {
     padding: 5px;
     max-width: 1540px;
     min-width: 1400px;
@@ -101,29 +57,30 @@ a {
     list-style: none;
     display: flex;
 }
-.mypage-tab__box-inner li {
+.index__tab-inner li {
     font-size: 24px;
     font-weight: bold;
     margin: 0px 40px;
 }
-.mypage-tab__box-inner li.selected {
+.index__tab-inner li.selected {
     color: #ff0000;
 }
 /* 選択されていないタブは、カーソルをポインター表示にする。*/
-.mypage-tab__box-inner li:not(.selected) {
+.index__tab-inner li:not(.selected) {
     cursor: pointer;
 }
 /* 選択されていないタブは、ホバー時に半透明にする。*/
-.mypage-tab__box-inner li:not(.selected):hover {
+.index__tab-inner li:not(.selected):hover {
     opacity: 0.6;
 }
 
+
 /* コンテンツ */
-.mypage-tab__item {
+.index__item {
     display: none;
 }
 /* selectedクラスが付いたコンテンツのみ表示。 */
-.mypage-tab__item.selected {
+.index__item.selected {
     max-width: 1540px;
     min-width: 1400px;
     margin: 0 auto;
@@ -131,25 +88,48 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
-.mypage-tab__item-card {
+.index__item-card {
     position: relative;
     width: 25%;
     margin-bottom: 50px;
 }
-.mypage-tab__item-box {
+.index__item-link:hover {
+    opacity: 0.7;
+}
+.index__item-box {
     width: 90%;
     margin: 0 auto;
 }
-.mypage-tab__item-link:hover {
-    opacity: 0.7;
-}
-.mypage-tab__item-img {
+.index__item-img {
     display: block;
     width: 100%;
     height: auto;
     margin: 0 auto;
 }
-.mypage-tab__item-name {
+.index__item-name {
     font-size: 24px;
     margin: 0px;
+}
+
+
+.index__item-guest-box {
+    margin: 0 auto;
+}
+.index__item-login-box {
+    text-align: center;
+    margin: 40px 0px;
+}
+.index__item-register-box {
+    text-align: center;
+}
+.index__item-login-url,
+.index__item-register-url {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #0073CC;
+}
+.index__item-login-url:hover,
+.index__item-register-url:hover {
+    opacity: 0.8;
 }

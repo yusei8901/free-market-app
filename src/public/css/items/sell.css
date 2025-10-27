@@ -1,0 +1,159 @@
+/* 全体設定 */
+.header {
+    margin-bottom: 50px;
+}
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+form select,
+form input,
+form textarea {
+    display: inline-block;
+    width: 100%;
+    font-size: 24px;
+    padding: 10px;
+}
+.hidden {
+    display: none;
+}
+.sell-form__title--gray {
+    color: #5f5f5f;
+    border-bottom: 1.5px solid #5f5f5f;
+    padding: 5px 0;
+}
+
+.sell {
+    width: 680px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.sell-title {
+    text-align: center;
+}
+.sell-form {
+    margin-bottom: 30px;
+}
+.sell-form__section-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+.sell-form__input-box {
+    margin-bottom: 50px;
+}
+
+/* 商品画像セクション */
+.sell-form__image-box {
+    border: 1.5px dotted #000;
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    border-radius: 10px;
+}
+#imagePreview {
+    max-width: 300px;
+    margin: 0 auto;
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+.sell-form__select-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #f55;
+    border: 1.5px solid #f55;
+}
+.sell-form__select-btn:hover {
+    cursor: pointer;
+    background-color: #f55;
+    color: #fff;
+}
+
+/* カテゴリーセクション */
+.sell-form__category-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sell-form__category-btn {
+    border: 2px solid #ff5655;
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #ff5655;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.sell-form__category-btn:hover {
+    cursor: pointer;
+    background-color: #ff5655;
+    color: #fff;
+}
+.sell-form__checkbox:checked + .sell-form__category-btn {
+    background-color: #ff5655;
+    color: #fff;
+}
+/* 商品の説明 */
+.sell-form__description {
+    height: 125px;
+}
+
+/* 販売価格セクション */
+.sell-form__price-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid #000;
+}
+.sell-form__price-box:focus-within {
+    border: 2px solid #000;
+}
+.sell-form__price-box:focus {
+    border: 2px solid #000;
+    font-weight: bold;
+    outline: none;
+}
+.sell-form__price-icon {
+    text-align: center;
+    font-size: 32px;
+    padding: 0px 10px;
+}
+.sell-form__price-icon::before {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+.sell-form__price-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+}
+.sell-form__submit-btn {
+    width: 100%;
+    color: #fff;
+    background: #f55;
+    border: none;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.sell-form__submit-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.sell-form__register-error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}

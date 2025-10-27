@@ -27,7 +27,7 @@ class RegisterRequest extends FormRequest
         return [
             'name' => ['required', 'max:20', Rule::unique('users', 'name')],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
-            'password' => 'required|min:8',
+            'password' => 'required|min:8|confirmed',
             'password_confirmation' => 'required|same:password',
         ];
     }
@@ -35,14 +35,14 @@ class RegisterRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'ユーザー名を入力してください',
+            'name.required' => 'お名前を入力してください',
             'name.unique' => '既に同じ名前のユーザーがいます',
             'name.max' => '20文字以内で入力してください',
             'email.required' => 'メールアドレスを入力してください',
-            'email.email' => 'メールアドレスの形式で入力してください',
+            'email.email' => 'メールアドレスはメール形式で入力してください',
             'email.unique' => '既に使用されているメールアドレスです',
             'password.required' => 'パスワードを入力してください',
-            'password.min' => 'パスワードは８文字以上で入力してください',
+            'password.min' => 'パスワードは8文字以上で入力してください',
             'password_confirmation.required' => '確認用パスワードを入力してください',
             'password_confirmation.same' => 'パスワードと一致しません'
         ];

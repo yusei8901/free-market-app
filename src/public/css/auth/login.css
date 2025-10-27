@@ -1,3 +1,4 @@
+/* 全体設定 */
 h2 {
     font-size: 36px;
     font-weight: 700;
@@ -16,11 +17,11 @@ input {
     margin-bottom: 80px;
 }
 
-.login__box {
+/* ログイン画面 */
+.login {
     width: 680px;
     margin: 0 auto;
 }
-
 .login__form {
     margin-bottom: 30px;
 }
@@ -28,10 +29,10 @@ input {
     text-align: center;
 }
 
-.input-box {
+.login__input-box {
     margin-bottom: 30px;
 }
-.input-box:last-of-type {
+.login__input-box:last-of-type {
     margin-bottom: 50px;
 }
 .login__error {
@@ -55,10 +56,10 @@ input {
     opacity: 0.8;
 }
 
-.register__box {
+.login__register-box {
     text-align: center;
 }
-.register__url {
+.login__register-url {
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;

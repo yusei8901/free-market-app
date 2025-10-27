@@ -6,61 +6,61 @@ label {
     font-size: 24px;
     font-weight: 700;
 }
-form input {
+input {
     width: 100%;
     display: inline-block;
     font-size: 24px;
     padding: 10px;
 }
-.message-box {
-    margin-bottom: 50px;
-    height: 20px;
-}
-.message-box:last-of-type {
-    margin-bottom: 80px;
-}
-.message-error {
-    color: #ff0000;
-    text-align: left;
+.hidden {
+    display: none;
 }
 
 .header {
     margin-bottom: 50px;
+    position: relative;
+    z-index: 10;
+}
+.verify__success {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgb(8, 122, 8);
+    color: white;
+    position: absolute;
+    top: 50px;
+    z-index: 5;
+    animation: alert-animation 3s ease;
+}
+@keyframes alert-animation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(44px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
 }
 
-.profile__box {
+.edit {
     width: 680px;
     margin: 0 auto;
     margin-bottom: 50px;
 }
-.profile__form {
-    margin-bottom: 30px;
-}
-.profile__title {
+.edit-title {
     text-align: center;
 }
-
-
-.image-box {
+.edit-form {
+    margin-bottom: 30px;
+}
+.edit-form__image-box {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 60px 0px;
-}
-.select-btn {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #f55;
-    border: 1.5px solid #f55;
-}
-.select-btn:hover {
-    cursor: pointer;
-    background-color: #f55;
-    color: #fff;
-}
-.hidden {
-    display: none;
 }
 #previewContainer {
     width: 150px;
@@ -69,14 +69,33 @@ form input {
     margin-right: 80px;
     background-color: #d9d9d9;
 }
-.profile-image {
+.edit-form__profile-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
 }
-
-
-.submit-btn {
+.edit-form__select-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #f55;
+    border: 1.5px solid #f55;
+}
+.edit-form__select-btn:hover {
+    cursor: pointer;
+    background-color: #f55;
+    color: #fff;
+}
+.edit-form__register-error {
+    margin-bottom: 50px;
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+.edit-form__register-error:last-of-type {
+    margin-bottom: 80px;
+}
+.edit-form__submit-btn {
     width: 100%;
     color: #fff;
     background: #f55;
@@ -87,6 +106,6 @@ form input {
     font-size: 26px;
     font-weight: bold;
 }
-.submit-btn:hover {
+.edit-form__submit-btn:hover {
     opacity: 0.8;
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileRequest;
 use App\Http\Requests\AddressRequest;
-use App\Models\Product;
+use App\Models\Item;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,8 +15,8 @@ class ProfileController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $items = $user->products()->latest()->get();
-        $purchases = $user->purchases()->with('product')->latest()->get();
+        $items = $user->items()->latest()->get();
+        $purchases = $user->purchases()->with('item')->latest()->get();
         return view('profile.mypage', compact('user', 'items', 'purchases'));
     }
     // プロフィール編集画面表示
@@ -38,7 +38,11 @@ class ProfileController extends Controller
             $user->profile_image = $path;
         }
         $user->save();
-        return redirect('/mypage');
+        $isFirst = is_null($user->email_verified_at);
+        if($isFirst) {
+            return redirect('/');
+        }
+        return redirect('/mypage')->with('profile_update', 'プロフィールを更新しました');
     }
     // 送付先変更ページ表示
     public function address($item_id)
@@ -54,6 +58,6 @@ class ProfileController extends Controller
         $item_id = $request->item_id;
         $user = Auth::user();
         $user->update($address);
-        return redirect()->route('products.purchase', ['item_id' => $item_id]);
+        return redirect()->route('items.index', ['item_id' => $item_id]);
     }
 }

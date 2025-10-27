@@ -2,17 +2,35 @@ a {
     text-decoration: none;
     color: #000;
 }
-
 .header {
     margin-bottom: 50px;
 }
 
+.index__keyword {
+    padding: 30px;
+}
+.index__keyword h2 {
+    margin: 0px;
+}
+.sold-out {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 10px 30px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* タブメニュー */
-.tab {
+.index__tab {
     width: 100%;
     border-bottom: 2px solid #000;
 }
-.tab-inner {
+.index__tab-inner {
     padding: 5px;
     max-width: 1540px;
     min-width: 1400px;
@@ -21,30 +39,30 @@ a {
     list-style: none;
     display: flex;
 }
-.tab-inner li {
+.index__tab-inner li {
     font-size: 24px;
     font-weight: bold;
     margin: 0px 40px;
 }
-.tab-inner li.selected {
+.index__tab-inner li.selected {
     color: #ff0000;
 }
 /* 選択されていないタブは、カーソルをポインター表示にする。*/
-.tab-inner li:not(.selected) {
+.index__tab-inner li:not(.selected) {
     cursor: pointer;
 }
 /* 選択されていないタブは、ホバー時に半透明にする。*/
-.tab-inner li:not(.selected):hover {
+.index__tab-inner li:not(.selected):hover {
     opacity: 0.6;
 }
 
 
 /* コンテンツ */
-.product {
+.index__item {
     display: none;
 }
 /* selectedクラスが付いたコンテンツのみ表示。 */
-.product.selected {
+.index__item.selected {
     max-width: 1540px;
     min-width: 1400px;
     margin: 0 auto;
@@ -52,60 +70,54 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
-.product__card {
+.index__item-card {
+    position: relative;
     width: 25%;
     margin-bottom: 50px;
 }
-.product__link:hover {
+.index__item-link:hover {
     opacity: 0.7;
 }
-.product__box {
+.index__item-box {
     width: 90%;
     margin: 0 auto;
 }
-.product__img {
-    /* background-color: #d9d9d9; */
-    width: 290px;
-    height: 290px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+.index__item-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
-.product__img-name {
-    font-size: 40px;
-}
-.product__name {
+.index__item-name {
     font-size: 24px;
     margin: 0px;
 }
-
-
-.guest-box {
-    margin: 0 auto;
+.index__result-none {
+    width: 100%;
+}
+.index__return-url {
+    color: #0073CC;
 }
 
-.login__box {
+
+.index__item-guest-box {
+    margin: 0 auto;
+}
+.index__item-login-box {
     text-align: center;
     margin: 40px 0px;
 }
-.login__url {
-    font-size: 20px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #0073CC;
-}
-
-.register__box {
+.index__item-register-box {
     text-align: center;
 }
-.register__url {
+.index__item-login-url,
+.index__item-register-url {
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;
     color: #0073CC;
 }
-
-.login__url:hover,
-.register__url:hover {
+.index__item-login-url:hover,
+.index__item-register-url:hover {
     opacity: 0.8;
 }

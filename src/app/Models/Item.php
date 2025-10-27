@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Item extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'user_id', 'name',
-        'product_image', 'brand', 'description', 'price', 'condition', 'sold'
+        'item_image', 'brand', 'description', 'price', 'condition', 'sold'
     ];
     // ユーザーリレーション
     public function user()
@@ -33,9 +33,9 @@ class Product extends Model
     {
         return $this->hasMany(Comment::class);
     }
-    
+    // 購入リレーション
     public function purchases()
     {
-        return $this->hasMany(Purchase::class);
+        return $this->hasOne(Purchase::class);
     }
 }

@@ -1,8 +1,7 @@
 .header {
     margin-bottom: 100px;
 }
-
-.item-wrapper {
+.item {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -13,12 +12,12 @@
 .item-left {
     width: 50%;
 }
-.item-left__img-box {
+.item-left__image {
     padding: 100px 50px;
     width: 100%;
     text-align: center;
 }
-.item-left__img-box img {
+.item-left__image img {
     width: 600px;
     height: 600px;
 }
@@ -28,39 +27,49 @@
     width: 50%;
     padding: 50px;
 }
-
-.item-right__product {
+.item-right__content {
     margin-bottom: 30px;
 }
-.product-title {
+.item-right__name {
     font-size: 46px;
     margin: 0px;
 }
-.brand-name {
+.item-right__brand {
     font-size: 20px;
     margin: 0px;
 }
-.price {
+.item-right__price {
     font-size: 30px;
 }
 
 /* いいね・コメント部分 */
-.actions {
+.item-right__actions {
     display: flex;
     padding: 0px 40px;
     margin-bottom: 20px;
 }
-.favorite {
+.item-right__favorite {
     margin-right: 50px;
 }
-.action-number {
+.item-right__action-number {
     margin: 0px;
     font-size: 18px;
     text-align: center;
 }
 
-/* 購入リンク用ボタン */
-.purchase-link {
+/* 購入リンクボタン */
+.item-right__sold {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    background: #0073CC;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+}
+.item-right__purchase {
     display: inline-block;
     width: 100%;
     color: #fff;
@@ -71,7 +80,7 @@
     text-decoration: none;
     text-align: center;
 }
-.purchase-link:hover {
+.item-right__purchase:hover {
     opacity: 0.8;
 }
 
@@ -79,27 +88,24 @@
 .item-right__explanation {
     margin-bottom: 50px;
 }
-.section-title {
+.item-right__section-title {
     font-size: 36px;
-}
-.no-margin-bottom {
-    margin-bottom: 0px;
-}
-.no-margin-top {
-    margin-top: 0px;
 }
 
 /* 商品情報セクション */
-table {
+.item-right__information {
+    margin-bottom: 20px;
+}
+.item-right__information table {
     text-align: center;
 }
-th {
+.item-right__information th {
     padding-right: 50px;
 }
-td {
+.item-right__information td {
     padding: 10px;
 }
-.category {
+.item-right__category {
     display: inline-block;
     background-color: #d9d9d9;
     border-radius: 10px;
@@ -107,45 +113,55 @@ td {
 }
 
 /* コメントセクション */
-.comment-title {
+.item-right__comment-title {
     color: #5f5f5f;
     font-size: 36px;
 }
-.comment-view {
+.item-right__comment-view {
     margin-bottom: 30px;
 }
-.user {
+.item-right__user {
     display: flex;
     align-items: center;
 }
-.icon {
+.item-right__icon {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     margin-right: 20px;
 }
-.user-name {
+.item-right__user-name {
     font-size: 30px;
     font-weight: bold;
 }
-.comment-content {
+.item-right__comment-content {
     background-color: #e5e5e5;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
 }
-label {
+.item-right__no-comments {
+    margin-bottom: 40px;
+}
+
+/* コメントフォーム部分 */
+.item-right__comments label {
     font-weight: bold;
     font-size: 28px;
 }
-textarea {
+.item-right__comments textarea {
     width: 100%;
     padding: 10px;
     font-size: 18px;
     height: 250px;
-    margin-bottom: 40px;
 }
-.submit-btn {
+.item-right__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.item-right__submit-btn {
     display: inline-block;
     width: 100%;
     color: #fff;
@@ -156,7 +172,7 @@ textarea {
     text-align: center;
     border: none;
 }
-.submit-btn:hover {
+.item-right__submit-btn:hover {
     cursor: pointer;
     opacity: 0.8;
 }

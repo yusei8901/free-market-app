@@ -8,14 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Purchase extends Model
 {
     use HasFactory;
-    protected $fillable = ['product_id', 'buyer_id'];
-
-    public function product()
+    protected $fillable = ['item_id', 'user_id', 'payment', 'postal_code', 'address', 'building'];
+    public function user()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(User::class);
     }
-    public function buyer()
+    public function item()
     {
-        return $this->belongsTo(User::class, 'buyer_id');
+        return $this->belongsTo(Item::class);
     }
 }

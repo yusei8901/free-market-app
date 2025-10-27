@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Like;
-use App\Models\Product;
+use App\Models\Item;
 use Illuminate\Support\Facades\Auth;
 
 class LikeController extends Controller
@@ -13,14 +13,14 @@ class LikeController extends Controller
     public function toggle($item_id)
     {
         $user = Auth::user();
-        $product = Product::findOrFail($item_id);
+        $item = Item::findOrFail($item_id);
 
-        if ($user->likes()->where('product_id', $product->id)->exists()) {
+        if ($user->likes()->where('item_id', $item->id)->exists()) {
             // いいね解除
-            $user->likes()->detach($product->id);
+            $user->likes()->detach($item->id);
         } else {
             // いいね追加
-            $user->likes()->attach($product->id);
+            $user->likes()->attach($item->id);
         }
         return back();
     }

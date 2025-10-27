@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
         'email' => 'test@test',
         'password' => Hash::make('12345678'),
         'profile_image' => 'profile/Armani+Mens+Clock.jpg',
-        'postal_code' => 3335555,
+        'postal_code' => '333-5555',
         'address' => '東京都',
         'building' => '東京スカイツリー',
         ];
@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'test2@test2',
             'password' => Hash::make('12345678'),
             'profile_image' => 'profile/Living+Room+Laptop.jpg',
-            'postal_code' => 9990000,
+            'postal_code' => '999-0000',
             'address' => '京都府',
             'building' => '京都タワー',
         ];
@@ -40,7 +40,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'test3@test3',
             'password' => Hash::make('12345678'),
             'profile_image' => 'profile/Waitress+with+Coffee+Grinder.jpg',
-            'postal_code' => 1234567,
+            'postal_code' => '123-4567',
             'address' => '福岡県',
             'building' => 'PayPayドーム',
         ];

@@ -1,94 +1,99 @@
-.content-wrapper {
+.section-title {
+    font-size: 20px;
+    margin: 0px;
+}
+.purchase {
     padding: 100px 80px;
     display: flex;
     justify-content: space-between;
 }
 
 /* 左セクション */
-.content-left {
+.purchase-left {
     width: 60%;
 }
 /* 商品部分 */
-.product {
+.purchase-left__item {
     display: flex;
     padding-bottom: 50px;
     border-bottom: 1px solid #000;
 }
-.product-img {
+.purchase-left__item-img {
     width: 180px;
     height: 180px;
     margin-right: 50px;
 }
-.product-name {
+.purchase-left__item-name {
     font-size: 30px;
     margin-top: 0px;
 }
-.product-price {
+.purchase-left__item-price {
     font-size: 27px;
     margin: 20px 0px;
 }
 
 /* 支払い方法部分 */
-.payment {
+.purchase-left__payment  {
     padding: 30px;
     border-bottom: 1px solid #000;
 }
-.section-title {
-    font-size: 20px;
-    margin: 0px;
-}
-.select-box {
+
+.purchase-left__payment-select-box {
     padding: 30px 50px;
 }
-select {
+.purchase-left__payment-select-box select {
     font-size: 16px;
     color: #5f5f5f;
     width: 265px;
     padding: 5px;
 }
-select:hover {
+.purchase-left__payment-select-box select:hover {
     cursor: pointer;
     color: #000;
     border: 1px solid #000;
 }
 
 /* 配送部分 */
-.shipping-address {
+.purchase-left__address {
     padding: 30px;
     border-bottom: 1px solid #000;
 }
-.shipping-address__top {
+.purchase-left__address-top {
     display: flex;
     justify-content: space-between;
 }
-.address-change {
+.purchase-left__address-change {
     text-decoration: none;
     color: #0073cc;
     font-size: 20px;
 }
-.address-change:hover {
+.purchase-left__address-change:hover {
     opacity: 0.8;
 }
-.address-information {
+.purchase-left__address-information {
     padding: 30px 50px;
 }
-.address-text {
+.purchase-left__address-text {
     font-weight: bold;
     font-size: 20px;
     margin: 10px 0px;
 }
+.purchase-left__register-error {
+    color: #ff0000;
+}
 
 /* 右セクション */
-.content-right {
+.purchase-right {
     width: 35%;
 }
-table {
+.purchase-right__form table {
     width: 100%;
     border: 1px solid #000;
     border-collapse: collapse;
     margin-bottom: 50px;
 }
-th, td {
+.purchase-right__form th,
+.purchase-right__form td {
     width: 50%;
     text-align: center;
     font-weight: normal;
@@ -96,12 +101,26 @@ th, td {
     padding: 40px 0px;
     border-bottom: 1px solid #000;
 }
-td {
+.purchase-right__form td {
     font-size: 24px;
 }
+.purchase-right__form-price,
+.purchase-right__form-payment {
+    border: none;
+    font-size: 24px;
+    field-sizing: content;
+}
+.purchase-right__form-price:focus,
+.purchase-right__form-payment:focus {
+    outline: none;
+}
+.purchase-right__form-address,
+.purchase-right__form-postal-code,
+.purchase-right__form-building {
+    display: none;
+}
 
-
-.submit-btn {
+.purchase-right__form-submit {
     width: 100%;
     background: #ff5555;
     color: #fff;
@@ -111,7 +130,7 @@ td {
     border: none;
     border-radius: 5px;
 }
-.submit-btn:hover {
+.purchase-right__form-submit:hover {
     cursor: pointer;
     opacity: 0.8;
 }

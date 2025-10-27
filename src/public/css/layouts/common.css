@@ -1,7 +1,6 @@
 .header {
-    width: 100%;
     background: #000;
-    padding: 0px 20px;
+    padding: 10px 20px;
 }
 
 .header__inner {
@@ -13,6 +12,11 @@
     align-items: center;
 }
 
+.header__link {
+    display: flex;
+
+}
+
 .header__search {
     width: 500px;
     color: #000;
@@ -22,6 +26,7 @@
 }
 
 .header__nav {
+    width: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -32,7 +37,6 @@
 .header__mypage {
     text-decoration: none;
     color: #fff;
-    margin-right: 10px;
 }
 
 .header__logout {

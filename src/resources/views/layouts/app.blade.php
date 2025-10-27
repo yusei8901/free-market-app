@@ -14,11 +14,15 @@
     <header class="header">
         <div class="header__inner">
             <h1 class="header__left">
-                <a href="/" class="header__link"><img src="{{ asset('img/logo.svg') }}" alt="ロゴ画像"></a>
+                <a href="/" class="header__link">
+                    <img src="{{ asset('img/logo.svg') }}" alt="ロゴ画像">
+                </a>
             </h1>
             @if (!isset($hideSection) || !$hideSection)
                 <div class="header__center">
-                    <input class="header__search" type="text" placeholder="なにをお探しですか？">
+                    <form action="{{ route('items.search') }}" method="GET">
+                        <input class="header__search" type="text" name="keyword" placeholder="なにをお探しですか？" value="{{ old('input') }}">
+                    </form>
                 </div>
                 <nav class="header__nav">
                     @guest
@@ -29,8 +33,8 @@
                             @csrf
                             <button class="header__logout">ログアウト</button>
                         </form>
-                        <a class="header__mypage" href="/mypage">マイページ</a>
                     @endauth
+                    <a class="header__mypage" href="/mypage">マイページ</a>
                     <a class="header__listing" href="/sell">出品</a>
                 </nav>
             @endif

@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -28,36 +28,24 @@ class User extends Authenticatable
     ];
 
     // 商品リレーション
-    public function products()
+    public function items()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Item::class);
     }
     // 良いねリレーション
     public function likes()
     {
-        return $this->belongsToMany(Product::class, 'likes')->withTimestamps();
+        return $this->belongsToMany(Item::class, 'likes')->withTimestamps();
     }
     // コメントリレーション
     public function comments()
     {
         return $this->hasMany(Comment::class);
     }
-
-
+    // 購入リレーション
     public function purchases()
     {
-        return $this->hasMany(Purchase::class, 'buyer_id');
-    }
-
-
-    public function purchasedProducts()
-    {
-        return $this->belongsToMany(Product::class, 'purchases', 'buyer_id', 'product_id')->withTimestamps();
-    }
-
-    public function getFormattedPostalCode()
-    {
-        return substr($this->postal_code, 0, 3) . '-' . substr($this->postal_code, 3);
+        return $this->hasMany(Purchase::class);
     }
 
     /**

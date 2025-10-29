@@ -63,3 +63,4 @@ MAIL_FROM_ADDRESS = no-reply@example.com
 
 ## ER図
 
+![ER図](/freemarketapp.png)

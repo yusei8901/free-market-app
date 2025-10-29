@@ -53,5 +53,13 @@ MAIL_FROM_ADDRESS = no-reply@example.com
 
 ## 使用技術
 
-・PHP 8.
-・Laravel 8.
+・PHP 8.1.33
+
+・Laravel 8.83.29
+
+・MySQL 8.0.26
+
+・nginx 1.21.1
+
+## ER図
+

@@ -100,14 +100,11 @@
                 tabContent.classList.toggle('selected', tabContent.id === 'index__' + tabId);
             });
         }
-
         showTab(activeTab);
-
         tabMenuItems.forEach(tabMenuItem => {
             tabMenuItem.addEventListener('click', () => {
                 const tabId = tabMenuItem.dataset.id.replace('index__', '');
                 const newUrl = new URL(window.location.href);
-
                 if (tabId === 'recommend') {
                     // おすすめタブならURLを / に戻す
                     newUrl.searchParams.delete('tab');
@@ -120,7 +117,6 @@
                 showTab(tabId);
             });
         });
-
         // ブラウザの戻る/進む対応
         window.addEventListener('popstate', () => {
             const params = new URLSearchParams(window.location.search);

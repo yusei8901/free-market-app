@@ -3,11 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Purchase;
+use App\Models\Category;
 
-class PurchaseFactory extends Factory
+class CategoryFactory extends Factory
 {
-    protected $model = Purchase::class;
+    protected $model = Category::class;
     /**
      * Define the model's default state.
      *
@@ -16,9 +16,7 @@ class PurchaseFactory extends Factory
     public function definition()
     {
         return [
-            'payment' => 'コンビニ払い',
-            'postal_code' => '111-1111',
-            'address' => $this->faker->city(),
+            'name' => $this->faker->name
         ];
     }
 }

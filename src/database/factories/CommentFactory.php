@@ -3,11 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Purchase;
+use App\Models\Comment;
 
-class PurchaseFactory extends Factory
+class CommentFactory extends Factory
 {
-    protected $model = Purchase::class;
+    protected $model = Comment::class;
     /**
      * Define the model's default state.
      *
@@ -16,9 +16,7 @@ class PurchaseFactory extends Factory
     public function definition()
     {
         return [
-            'payment' => 'コンビニ払い',
-            'postal_code' => '111-1111',
-            'address' => $this->faker->city(),
+            'comment' => $this->faker->text()
         ];
     }
 }

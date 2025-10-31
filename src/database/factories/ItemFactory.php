@@ -3,9 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Item;
 
 class ItemFactory extends Factory
 {
+    protected $model = Item::class;
     /**
      * Define the model's default state.
      *

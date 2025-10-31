@@ -42,7 +42,6 @@ class LoginTest extends TestCase
      */
     public function test_invalid_credentials_show_error_message()
     {
-        // 存在しないユーザー情報でログインを試みる
         $response = $this->from('/login')->post('/login', [
             'email' => 'wrong@example.com',
             'password' => 'wrongpassword',
@@ -60,12 +59,10 @@ class LoginTest extends TestCase
             'email' => 'user@example.com',
             'password' => bcrypt('password123'),
         ]);
-
         $response = $this->post('/login', [
             'email' => 'user@example.com',
             'password' => 'password123',
         ]);
-
         $this->assertAuthenticatedAs($user);
         $response->assertRedirect('/');
     }

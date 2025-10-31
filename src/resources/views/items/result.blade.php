@@ -88,30 +88,41 @@
         const tabMenuItems = document.querySelectorAll('.index__tab-inner li');
         const tabContents = document.querySelectorAll('.index__item');
 
+        const params = new URLSearchParams(window.location.search);
+        const activeTab = params.get('tab') || 'recommend';
+
+        // タブの表示切り替え関数
+        function showTab(tabId) {
+            tabMenuItems.forEach(tabMenuItem => {
+                tabMenuItem.classList.toggle('selected', tabMenuItem.dataset.id === 'index__' + tabId);
+            });
+
+            tabContents.forEach(tabContent => {
+                tabContent.classList.toggle('selected', tabContent.id === 'index__' + tabId);
+            });
+        }
+        showTab(activeTab);
         tabMenuItems.forEach(tabMenuItem => {
             tabMenuItem.addEventListener('click', () => {
-
-                // 全てのタブからselectedクラスを外す。
-                tabMenuItems.forEach(tabMenuItem => {
-                    tabMenuItem.classList.remove('selected');
-                });
-
-                // クリックされたタブのみselectedクラスを付ける。
-                tabMenuItem.classList.add('selected');
-
-                // 全てのタブのコンテンツからselectedクラスを外す。
-                tabContents.forEach(tabContent => {
-                    tabContent.classList.remove('selected');
-                });
-
-                // クリックされたタブのカスタムデータ属性と同じIDを持つコンテンツに、selectedクラスを付ける。
-                // カスタムデータ属性については別記事で紹介しています。
-                document.getElementById(tabMenuItem.dataset.id).classList.add('selected');
+                const tabId = tabMenuItem.dataset.id.replace('index__', '');
+                const newUrl = new URL(window.location.href);
+                if (tabId === 'recommend') {
+                    // おすすめタブならURLを / に戻す
+                    newUrl.searchParams.delete('tab');
+                    window.history.pushState({}, '', newUrl.origin + newUrl.pathname);
+                } else {
+                    // それ以外のタブならパラメータを付与
+                    newUrl.searchParams.set('tab', tabId);
+                    window.history.pushState({}, '', newUrl);
+                }
+                showTab(tabId);
             });
         });
+        // ブラウザの戻る/進む対応
+        window.addEventListener('popstate', () => {
+            const params = new URLSearchParams(window.location.search);
+            const tabId = params.get('tab') || 'recommend';
+            showTab(tabId);
+        });
     </script>
-
-
-
-
 @endsection

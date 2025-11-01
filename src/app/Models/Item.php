@@ -38,4 +38,7 @@ class Item extends Model
     {
         return $this->hasOne(Purchase::class);
     }
+    protected $casts = [
+        'sold' => 'boolean',
+    ];
 }

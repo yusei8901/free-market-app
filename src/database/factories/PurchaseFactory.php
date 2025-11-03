@@ -16,7 +16,7 @@ class PurchaseFactory extends Factory
     public function definition()
     {
         return [
-            'payment' => 'コンビニ払い',
+            'payment_method' => 'card',
             'postal_code' => '111-1111',
             'address' => $this->faker->city(),
         ];

@@ -19,7 +19,7 @@
             登録していただいたメールアドレスに認証メールを送付しました。<br>
             メール認証を完了してください。
         </p>
-        <a href="{{ $verificationUrl }}" class="verify__button">認証はこちらから</a>
+        <a href="{{ route('verification.confirm') }}" class="verify__button">認証はこちらから</a>
         <form action="{{ route('verification.send') }}" method="POST">
             @csrf
             <button class="verify__mail-again" type="submit">認証メールを再送する</button>

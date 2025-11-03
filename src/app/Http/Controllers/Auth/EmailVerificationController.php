@@ -14,14 +14,30 @@ class EmailVerificationController extends Controller
      */
     public function notice()
     {
+        return view('auth.verify-email');
+    }
+
+    /**
+     * 確認メールを再送する処理
+     */
+    public function resend(Request $request)
+    {
+        $request->user()->sendEmailVerificationNotification();
+        return back()->with('message', '確認メールを再送しました。');
+    }
+
+    /**
+     * メール認証をするページ
+     */
+    public function confirm()
+    {
         $user = auth()->user();
-        // 本来はメールに記載されるリンクをここで生成
         $verificationUrl = URL::temporarySignedRoute(
             'verification.verify',
-            now()->addMinutes(60), // 有効期限（例: 60分）
+            now()->addMinutes(60), //有効期限（60分）
             ['id' => $user->id, 'hash' => sha1($user->email)]
         );
-        return view('auth.verify-email', [
+        return view('auth.verify-user', [
             'verificationUrl' => $verificationUrl,
         ]);
     }
@@ -33,15 +49,6 @@ class EmailVerificationController extends Controller
     {
         $request->fulfill(); // 認証完了処理
         return redirect('/mypage/profile')
-        ->with('success', 'メール認証が完了しました'); // 認証後の遷移先
-    }
-
-    /**
-     * 確認メールを再送する処理
-     */
-    public function resend(Request $request)
-    {
-        $request->user()->sendEmailVerificationNotification();
-        return back()->with('message', '確認メールを再送しました。');
+            ->with('success', 'メール認証が完了しました'); // 認証後の遷移先
     }
 }

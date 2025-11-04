@@ -11,8 +11,10 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class PurchaseTest extends TestCase
 {
     use RefreshDatabase;
+
     // Stripeの実装によりこのテストは機能しない
-    
+
+
     /** @test
      * 「購入する」ボタンを押下すると購入が完了する
      */

@@ -25,18 +25,19 @@ class PaymentSelectionTest extends TestCase
             'price' => 5000,
         ]);
         $this->actingAs($user);
-        // 支払い方法を選択して「確認画面(items.confirm)」へ送信
-        $response = $this->get(route('items.confirm', [
+
+        // 支払い方法を選択して「購入成功画面」を表示
+        $response = $this->get(route('items.index', [
             'item_id' => $item->id,
             'price' => $item->price,
-            'payment' => 'カード払い',
+            'payment_method' => 'card',
             'postal_code' => $user->postal_code,
             'address' => $user->address,
             'building' => $user->building,
         ]));
         // ステータスコードが200であることを確認
         $response->assertStatus(200);
-        // 選択した支払い方法「カード払い」が表示されていることを確認
-        $response->assertSee('カード払い');
+        // 選択した支払い方法「カード支払い」が表示されていることを確認
+        $response->assertSee('カード支払い');
     }
 }

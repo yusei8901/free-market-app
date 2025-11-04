@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Models\User;
 
 class RegisterTest extends TestCase
 {
@@ -26,6 +27,22 @@ class RegisterTest extends TestCase
     }
 
     /**
+     * お名前が20文字以上で入力された場合、バリデーションメッセージが表示される
+     */
+    public function test_name_is_invalid_when_longer_than_20_characters()
+    {
+        $longName = str_repeat('あ', 21);
+        $this->post('/register', [
+            'name' => $longName,
+            'email' => 'test@example.com',
+            'password' => 'password123',
+            'password_confirmation' => 'password123',
+        ]);
+        $errors = session('errors')->getMessages();
+        $this->assertEquals('20文字以内で入力してください', $errors['name'][0]);
+    }
+
+    /**
      * メールアドレスが入力されていない場合、バリデーションメッセージが表示される
      */
     public function test_email_is_required()
@@ -38,6 +55,40 @@ class RegisterTest extends TestCase
         ]);
         $errors = session('errors')->getMessages();
         $this->assertEquals('メールアドレスを入力してください', $errors['email'][0]);
+    }
+
+    /**
+     * メールアドレスがメール形式で入力されていない場合、バリデーションメッセージが表示される
+     */
+    public function test_validation_error_is_displayed_when_email_is_not_in_valid_format()
+    {
+        $response = $this->post('/register', [
+            'name' => 'テスト太郎',
+            'email' => 'aaa',
+            'password' => 'password123',
+            'password_confirmation' => 'password123',
+        ]);
+        $errors = session('errors')->getMessages();
+        $this->assertEquals('メールアドレスはメール形式で入力してください', $errors['email'][0]);
+    }
+
+    /**
+     * すでにメールアドレスが使用されている場合、バリデーションメッセージが表示される
+     */
+    public function test_validation_error_is_displayed_when_email_is_already_taken()
+    {
+        // 既存ユーザーを作成
+        $existingUser = User::factory()->create([
+            'email' => 'test@example.com',
+        ]);
+        $response = $this->post('/register', [
+            'name' => 'テスト太郎',
+            'email' => 'test@example.com',
+            'password' => 'password123',
+            'password_confirmation' => 'password123',
+        ]);
+        $errors = session('errors')->getMessages();
+        $this->assertEquals('既に使用されているメールアドレスです', $errors['email'][0]);
     }
 
     /**

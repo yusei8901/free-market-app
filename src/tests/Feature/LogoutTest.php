@@ -11,8 +11,10 @@ class LogoutTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
-    public function user_can_logout_successfully()
+    /** @test
+     * ログアウトできる
+     */
+    public function test_user_can_logout_successfully()
     {
         $user = User::factory()->create();
         $this->actingAs($user);

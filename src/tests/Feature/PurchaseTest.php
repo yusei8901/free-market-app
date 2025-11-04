@@ -11,7 +11,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class PurchaseTest extends TestCase
 {
     use RefreshDatabase;
-
+    // Stripeの実装によりこのテストは機能しない
+    
     /** @test
      * 「購入する」ボタンを押下すると購入が完了する
      */
@@ -21,7 +22,7 @@ class PurchaseTest extends TestCase
         $item = Item::factory()->create([
             'sold' => false,
         ]);
-        $response = $this->actingAs($user)
+        $this->actingAs($user)
             ->post(route('purchase.store', $item->id), [
                 'postal_code' => '123-4567',
                 'address' => '東京都渋谷区1-2-3',

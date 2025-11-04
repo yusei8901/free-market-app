@@ -21,12 +21,12 @@ class PurchaseController extends Controller
     }
 
     // 購入直前画面表示
-    public function confirm(PurchaseRequest $request, $item_id)
-    {
-        $item = Item::findOrFail($item_id);
-        $requests = $request->only(['price', 'payment', 'postal_code', 'address', 'building']);
-        return view('items.confirm', compact('item', 'requests'));
-    }
+    // public function confirm(PurchaseRequest $request, $item_id)
+    // {
+    //     $item = Item::findOrFail($item_id);
+    //     $requests = $request->only(['price', 'payment', 'postal_code', 'address', 'building']);
+    //     return view('items.confirm', compact('item', 'requests'));
+    // }
 
     // 購入処理（ボタンのみ）
     // public function store(Request $request, $item_id)
